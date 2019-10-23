@@ -75,6 +75,13 @@ a {
   height: 180px;
   background: #ccc;
 }
+.block-feature span {
+  display: block;
+  background: #ccc;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
 
 /* SPEAKER */
 .section-speakers [class*=uk-align] {
