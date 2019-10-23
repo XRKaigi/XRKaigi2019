@@ -68,6 +68,13 @@ a {
   vertical-align: middle;
   min-width: 4rem;
 }
+.block-about-feature span {
+  display: block;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  background: #ccc;
+}
 
 /* SPEAKER */
 .section-speakers [class*=uk-align] {
