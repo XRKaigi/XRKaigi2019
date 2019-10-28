@@ -6,7 +6,10 @@ body {
   color: #333;
   font-family: 'M PLUS 1p', sans-serif;
 }
-a {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: #333;
   text-decoration: underline;
 }
@@ -40,6 +43,11 @@ a {
 .uk-navbar-nav>li>a {
   color: #333;
 }
+.block-gnav-btn-ticket a {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 /* header */
 .section-header {
@@ -48,6 +56,11 @@ a {
   background-size: cover;
   padding-top: 50px;
   padding-bottom: 30px;
+}
+.section-header-detail {
+  background: url('../img/kv.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media screen and (max-width: 1030px) {
   .section-navbar li a {
@@ -59,10 +72,10 @@ a {
 .section-about {
   background: #edede5;
 }
-.block-about-table {
+.block-table {
   background: #fff;
 }
-.section-about .uk-table th {
+.block-table.uk-table th {
   color: #333;
   text-align: center;
   vertical-align: middle;
@@ -135,4 +148,56 @@ a {
 }
 .section-contact .uk-description-list>dd {
   font-size: 1.1rem;
+}
+
+/* PAGES */
+
+/* SESSION */
+
+.section-session .uk-label,
+.section-session .uk-description-list>dt {
+  text-transform: none;
+}
+.section-session .uk-description-list>dt:nth-child(n+2) {
+  margin-top: 10px;
+}
+.section-session .uk-card-title {
+  font-size: 1rem;
+}
+.section-session dd {
+  font-size: .76rem;
+  margin-top: 5px;
+}
+.section-session .uk-label {
+  color: #333;
+  font-weight: bold;
+}
+.uk-label-theatre {
+  background: #fff2cc;
+}
+.uk-label-w {
+  background: #c9daf8;
+}
+.uk-label-next1 {
+  background: #f4cccc;
+}
+.uk-label-next2 {
+  background: #d9ead3;
+}
+.uk-label-next3 {
+  background: #d9d2e9;
+}
+.block-cos {
+  font-size: 0.8rem;
+}
+
+/* SESSION DETAIL */
+.section-detail .uk-label {
+  color: #333;
+}
+
+/* CODE OF CONDUCT */
+.section-coc .uk-description-list>dt {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
