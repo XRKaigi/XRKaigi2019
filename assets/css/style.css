@@ -18,6 +18,13 @@ a:active {
 .uk-container-small {
   max-width: 980px;
 }
+a.uk-button:link,
+a.uk-button:visited,
+a.uk-button:hover,
+a.uk-button:active {
+  color: #fff;
+  text-decoration: none;
+}
 
 /* common */
 .section-title {
@@ -43,10 +50,6 @@ a:active {
 .uk-navbar-nav>li>a {
   color: #333;
 }
-.block-gnav-btn-ticket a {
-  color: #fff;
-  text-decoration: none;
-}
 
 
 /* header */
@@ -62,9 +65,9 @@ a:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media screen and (max-width: 1030px) {
-  .section-navbar li a {
-    padding: 0 10px;
+@media screen and (max-width: 1050px) {
+  .uk-navbar-nav li a {
+    padding: 0 9px;
   }
 }
 
@@ -194,6 +197,15 @@ a:active {
 /* SESSION DETAIL */
 .section-detail .uk-label {
   color: #333;
+}
+
+.section-detail h1 span {
+  margin-right: 10px;
+}
+@media (min-width: 960px) {
+  .section-detail h1 span {
+    font-size: 1.2rem;
+  }
 }
 
 /* CODE OF CONDUCT */
