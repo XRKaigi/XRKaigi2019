@@ -190,6 +190,10 @@ a.uk-button:active {
 .uk-label-next3 {
   background: #d9d2e9;
 }
+.uk-label-tag-en {
+  background: #ccc;
+  font-size: 0.6rem;
+}
 .block-cos {
   font-size: 0.8rem;
 }
