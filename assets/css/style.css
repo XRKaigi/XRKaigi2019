@@ -34,12 +34,14 @@ a.uk-button:active {
 .section-about li:nth-child(n+2),
 .block-speakers-note > li:nth-child(n+2),
 .block-ticket-note > li:nth-child(n+2),
-.block-schedule-note > li:nth-child(n+2) {
+.block-schedule-note > li:nth-child(n+2),
+.block-sponsor-note > li:nth-child(n+2) {
   margin-top: 5px;
 }
 .section-speaker h3,
 .section-schedule h3,
-.section-sponsors h3 {
+.section-sponsors h3,
+.section-sponsors h4 {
   font-family: 'M PLUS 1p', sans-serif;
 }
 
