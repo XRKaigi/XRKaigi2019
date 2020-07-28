@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<title>音声対話エンジンを使った中の人がいないバーチャルキャラクターとその先の未来｜XR Kaigi 2019</title>
+<meta name="description" content="手軽に音声対話アプリケーションが開発できるドコモAIエージェントAPIを使って、「中の人がいない」バーチャルキャラクターを実現。VRでキャラクターとふれあえる「VR握手会」を開発、ニコニコ超会議2019等への出展を行いました。新規に感情表現（ツンデレ）できる音声合成モデルを開発し、バーチャルキャラクターと掛け合わせることで、従来の対話アプリケーションより楽しく自然なコミュニケーションが可能となっています。本講演では特に音声合成にフォーカスして、キャラクター性、人間らしさなど豊かな表現力をもった音声合成の作り方や活用方法を解説。そしてこの先で実現しようとしている未来の音声合成にも踏み込んでお話します。">
+<meta name="viewport" content="width=device-width"/>
+<meta property="og:title" content="音声対話エンジンを使った中の人がいないバーチャルキャラクターとその先の未来｜XR Kaigi 2019">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://xrkaigi.com/session/s55.html">
+<meta property="og:image" content="https://xrkaigi.com/assets/img/ogimage.png?20191126">
+<meta property="og:site_name" content="XR Kaigi 2019">
+<meta property="og:description"  content="手軽に音声対話アプリケーションが開発できるドコモAIエージェントAPIを使って、「中の人がいない」バーチャルキャラクターを実現。VRでキャラクターとふれあえる「VR握手会」を開発、ニコニコ超会議2019等への出展を行いました。新規に感情表現（ツンデレ）できる音声合成モデルを開発し、バーチャルキャラクターと掛け合わせることで、従来の対話アプリケーションより楽しく自然なコミュニケーションが可能となっています。本講演では特に音声合成にフォーカスして、キャラクター性、人間らしさなど豊かな表現力をもった音声合成の作り方や活用方法を解説。そしてこの先で実現しようとしている未来の音声合成にも踏み込んでお話します。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@XRKaigi">
+<meta name="twitter:creator" content="@ikkou">
+<link rel="canonical" href="https://xrkaigi.com/session/s55.html">
+<link rel="apple-touch-icon" type="image/png" href="../assets/img/icon-180x180.png">
+<link rel="icon" type="image/png" href="../assets/img/icon-192x192.png">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|M+PLUS+Rounded+1c|Noto+Sans+JP&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149479077-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-149479077-1');
+</script>
+</head>
+<body id="top">
+<div uk-sticky="" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed section-gnav">
+  <div class="uk-container uk-container-expand">
+    <nav class="uk-navbar">
+      <div class="uk-navbar-left">
+        <a href="../" class="uk-navbar-item uk-logo"><img data-src="../assets/img/header-logo.png" width="150" alt="" uk-img></a>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@m">
+          <li><a href="../index.html">トップ</a></li>
+          <li><a href="../index.html#about">開催概要</a></li>
+          <li><a href="../index.html#speaker">スピーカー</a></li>
+          <li><a href="../session/">タイムテーブル</a></li>
+          <li><a href="../expo/">展示</a></li>
+          <li><a href="../index.html#access">アクセス</a></li>
+          <li><a href="../index.html#sponsor">スポンサー</a></li>
+        </ul>
+        <div class="uk-navbar-item uk-visible@m">
+          <div class="block-gnav-btn-ticket"><a href="javascript:void(0);" class="uk-button uk-button-danger">チケット完売</a></div>
+        </div>
+        <a uk-navbar-toggle-icon="" href="#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></a>
+      </div>
+    </nav>
+  </div>
+</div>
+<header>
+  <div class="uk-background-cover section-header-detail">
+    <div class="uk-container uk-container-small uk-align-center uk-section">
+      <p class="uk-text-lead uk-text-bold">セッション詳細</p>
+      <p class="uk-text-lead uk-text-bold">SESSION DETAIL</p>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="uk-container uk-container-small uk-align-center uk-margin-top">
+    <ul class="uk-breadcrumb">
+      <li><a href="../index.html">TOP</a></li>
+      <li><a href="../session/index.html">タイムテーブル</a></li>
+    </ul>
+  </div>
+  <!-- SESSION -->
+  <section id="session-detail" class="uk-section section-detail">
+    <div class="uk-container uk-container-small uk-align-center">
+      <h1>音声対話エンジンを使った中の人がいないバーチャルキャラクターとその先の未来</h1>
+      <h2 class="uk-text-center uk-heading-line"><span>講演情報</span></h2>
+      <table class="uk-margin-medium-top uk-table uk-table-middle uk-table-divider uk-table-striped uk-table-large block-table">
+        <tr>
+          <th>会場</th>
+          <td><span class="uk-label uk-label-next3">Gallery Next-3</span></td>
+        </tr>
+        <tr>
+          <th>講演形式</th>
+          <td>45分セッション</td>
+        </tr>
+        <tr>
+          <th>講演日時</th>
+          <td>2019年12月4日(水) 15:00〜15:45</td>
+        </tr>
+        <tr>
+          <th>資料公開</th>
+          <td>予定なし</td>
+        </tr>
+        <tr>
+          <th>動画配信</th>
+          <td>予定なし</td>
+        </tr>
+        <tr>
+          <th>写真撮影可否</th>
+          <td>可</td>
+        </tr>
+        <tr>
+          <th>SNS投稿可否</th>
+          <td>可</td>
+        </tr>
+      </table>
+      <h2 class="uk-text-center uk-heading-line"><span>講演概要</span></h2>
+      <p class="uk-margin-medium-top">
+        手軽に音声対話アプリケーションが開発できるドコモAIエージェントAPIを使って、「中の人がいない」バーチャルキャラクターを実現。<br>
+        VRでキャラクターとふれあえる「VR握手会」を開発、ニコニコ超会議2019等への出展を行いました。<br>
+        新規に感情表現（ツンデレ）できる音声合成モデルを開発し、バーチャルキャラクターと掛け合わせることで、従来の対話アプリケーションより楽しく自然なコミュニケーションが可能となっています。<br>
+        本講演では特に音声合成にフォーカスして、キャラクター性、人間らしさなど豊かな表現力をもった音声合成の作り方や活用方法を解説。<br>
+        そしてこの先で実現しようとしている未来の音声合成にも踏み込んでお話します。
+      </p>
+      <h2 class="uk-text-center uk-heading-line"><span>講演者詳細</span></h2>
+      <ul class="uk-margin-medium-top uk-grid-match uk-child-width-1-2@m" uk-grid>
+        <li>
+          <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+            <div class="uk-card-header">
+              <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                  <img data-src="../assets/img/sponsor/NTTDoCoMo.png" width="100" height="" alt="NTTドコモ" uk-img>
+                </div>
+                <div class="uk-width-expand">
+                  <p class="uk-text-bold uk-margin-small">藤野 宏暢</p>
+                  <p class="uk-text-small uk-margin-remove-top">株式会社NTTドコモ イノベーション統括部</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li></li>
+        <li>
+          <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+            <div class="uk-card-header">
+              <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                  <img data-src="../assets/img/speaker/RyujiOzaki.jpg" width="100" height="" alt="尾崎 竜二" uk-img>
+                </div>
+                <div class="uk-width-expand">
+                  <p class="uk-text-bold uk-margin-small">尾崎 竜二<a href="https://twitter.com/ryuji0724" target="_blank"><span uk-icon="twitter" class="uk-margin-small-left"></span></a></p>
+                  <p class="uk-text-small uk-margin-remove-top">だるまジャパン合同会社 CEO/テクニカルディレクター</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+            <div class="uk-card-header">
+              <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                  <img data-src="../assets/img/speaker/MasayoshiKitagawa.jpg" width="100" height="" alt="北川 正義" uk-img>
+                </div>
+                <div class="uk-width-expand">
+                  <p class="uk-text-bold uk-margin-small">北川 正義<a href="https://twitter.com/mktgaw" target="_blank"><span uk-icon="twitter" class="uk-margin-small-left"></span></a></p>
+                  <p class="uk-text-small uk-margin-remove-top">だるまジャパン合同会社 テクニカルアーティスト</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="uk-margin-top">
+    <ul class="uk-flex-center uk-text-small uk-text-small" uk-grid>
+      <li><a href="https://www.moguravr.com/privacy/" target="_blank">プライバシーポリシー</a></li>
+      <li><a href="../coc/">行動規範</a></li>
+    </ul>
+    <p class="uk-text-small uk-text-center uk-text-small uk-margin-small">© 2019 XR Kaigi 2019 All Rights Reserved.</p>
+  </div>
+</footer>
+<div id="offcanvas" uk-offcanvas="flip: true">
+  <div class="uk-offcanvas-bar">
+    <div class="uk-panel">
+      <ul class="uk-nav uk-nav-default tm-nav">
+        <li><a href="../index.html">トップ</a></li>
+        <li><a href="../index.html#about">開催概要</a></li>
+        <li><a href="../index.html#speaker">スピーカー</a></li>
+        <li><a href="../session/">タイムテーブル</a></li>
+        <li><a href="../expo/">展示</a></li>
+        <li><a href="../index.html#access">アクセス</a></li>
+        <li><a href="../index.html#sponsor">スポンサー</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v4.0&appId=375096969211793&autoLogAppEvents=1"></script>
+</body>
+</html>
