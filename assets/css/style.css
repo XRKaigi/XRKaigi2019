@@ -61,11 +61,8 @@ a.uk-button:active {
 
 /* header */
 .section-header {
-  background: url('../img/kv.jpg');
-  background-repeat: no-repeat;
+  background: #eee;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 30px;
 }
 .section-header-detail {
   background: url('../img/kv.jpg');
@@ -101,51 +98,7 @@ a.uk-button:active {
   height: 150px;
 }
 
-/* SPEAKER */
-.section-speakers [class*=uk-align] {
-  margin-bottom: 20px;
-}
-.section-speakers .uk-text-small {
-  font-size: .76rem;
-}
-
-/* ACCESS */
-.section-access {
-  background: #ed6b67;
-  color: #fff;
-  padding-bottom: 0;
-}
-.section-access h2 {
-  color: #fff;
-}
-.block-access-venue {
-  font-size: 1.2rem;
-}
-
-/* SPONSORS */
-.section-sponsors ul {
-  padding-left: 0;
-}
-.section-sponsors li {
-  list-style: none;
-}
-.section-sponsors li:first-child {
-  margin-left: 0;
-}
-.section-sponsors li:last-child {
-  margin-right: 0;
-}
-@media screen and (max-width: 480px) {
-  .section-sponsors ul {
-    display: grid;
-    text-align: center;
-  }
-}
-
 /* CONTACT */
-.section-contact {
-  background-color: #edede5;
-}
 .section-contact .uk-description-list>dt {
   text-transform: inherit;
   font-size: 1rem;
@@ -153,84 +106,4 @@ a.uk-button:active {
 }
 .section-contact .uk-description-list>dd {
   font-size: 1.1rem;
-}
-
-/* PAGES */
-
-/* SESSION */
-
-.section-session .uk-label,
-.section-session .uk-description-list>dt {
-  text-transform: none;
-}
-.section-session .uk-description-list>dt:nth-child(n+2) {
-  margin-top: 10px;
-}
-.section-session .uk-card-title {
-  font-size: 1rem;
-}
-.section-session dd {
-  font-size: .76rem;
-  margin-top: 5px;
-}
-.section-session .uk-label {
-  color: #333;
-  font-weight: bold;
-}
-.uk-label-theatre {
-  background: #fff2cc;
-}
-.uk-label-w {
-  background: #c9daf8;
-}
-.uk-label-next1 {
-  background: #f4cccc;
-}
-.uk-label-next2 {
-  background: #d9ead3;
-}
-.uk-label-next3 {
-  background: #d9d2e9;
-}
-.uk-label-tag-en {
-  background: #ccc;
-  font-size: 0.6rem;
-}
-.block-cos {
-  font-size: 0.8rem;
-}
-
-/* SESSION DETAIL */
-.section-detail .uk-label {
-  color: #333;
-}
-
-.section-detail h1 span {
-  margin-right: 10px;
-}
-@media (min-width: 960px) {
-  .section-detail h1 span {
-    font-size: 1.2rem;
-  }
-}
-
-/* EXPO */
-.youtube {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-.youtube iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* CODE OF CONDUCT */
-.section-coc .uk-description-list>dt {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
 }
