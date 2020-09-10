@@ -98,7 +98,30 @@ a.uk-button:active {
   height: 150px;
 }
 
+/* SPONSORS */
+.section-sponsors ul {
+  padding-left: 0;
+}
+.section-sponsors li {
+  list-style: none;
+}
+.section-sponsors li:first-child {
+  margin-left: 0;
+}
+.section-sponsors li:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .section-sponsors ul {
+    display: grid;
+    text-align: center;
+  }
+}
+
 /* CONTACT */
+.section-contact {
+  background: #edede5;
+}
 .section-contact .uk-description-list>dt {
   text-transform: inherit;
   font-size: 1rem;
