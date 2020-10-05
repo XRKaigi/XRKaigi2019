@@ -31,6 +31,7 @@ a.uk-button:active {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 2.4rem;
 }
+.section-news li:nth-child(n+2),
 .section-about li:nth-child(n+2),
 .block-speakers-note > li:nth-child(n+2),
 .block-ticket-note > li:nth-child(n+2),
@@ -38,6 +39,7 @@ a.uk-button:active {
 .block-sponsor-note > li:nth-child(n+2) {
   margin-top: 5px;
 }
+.section-news h3,
 .section-speaker h3,
 .section-schedule h3,
 .section-sponsors h3,
@@ -68,6 +70,11 @@ a.uk-button:active {
   background: url('../img/kv.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* NEWS */
+.section-news {
+  background: #edede5;
 }
 
 /* ABOUT */
@@ -130,3 +137,8 @@ a.uk-button:active {
 .section-contact .uk-description-list>dd {
   font-size: 1.1rem;
 }
+
+/* Utility */
+.lstn { list-style-type: none; margin-left: -1em;}
+.m0 { margin: 0; }
+.mlm2em { margin-left: -2em; }
