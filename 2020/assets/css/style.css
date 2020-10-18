@@ -143,18 +143,30 @@ a.uk-button:active {
   text-transform: inherit;
   font-size: 1rem;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 .section-sessionList .uk-description-list>dt .label {
   display: table;
   font-size: 0.6rem;
+  margin-bottom: 5px;
   padding: 1px 3px;
 }
 .section-sessionList .uk-description-list>dd {
   color: #666;
   font-size: 0.9rem;
-  margin-top: 10px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
+}
+.section-detail .uk-label {
+  color: #333;
+}
+.section-detail h1 span {
+  margin-right: 10px;
+}
+@media (min-width: 960px) {
+  .section-detail h1 span {
+    font-size: 1.2rem;
+  }
 }
 
 /* Utility */
