@@ -138,6 +138,25 @@ a.uk-button:active {
   font-size: 1.1rem;
 }
 
+/* SESSION */
+.section-sessionList .uk-description-list>dt {
+  text-transform: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.section-sessionList .uk-description-list>dt .label {
+  display: table;
+  font-size: 0.6rem;
+  padding: 1px 3px;
+}
+.section-sessionList .uk-description-list>dd {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
 /* Utility */
 .lstn { list-style-type: none; margin-left: -1em;}
 .m0 { margin: 0; }
