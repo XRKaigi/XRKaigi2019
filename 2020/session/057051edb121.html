@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<title>次世代VRアニメーションの技術と表現について｜XR Kaigi 2020</title>
+<meta name="description" content="カヤックのXRチームを率いる天野が手掛けた、大人気からかい青春コメディー漫画『からかい上手の高木さん』(山本崇一朗 著)のVRアニメ「からかい上手の高木さんVR 1学期」。ユーザー自身が主人公となり、アニメの世界を自由に回遊しながらヒロインとのコミュニケーションを楽しむことができます。さらに、ユーザーの体の動きや移動にも連動する6Dofに対応した表現や演出を盛り込み、従来のアニメでは体験できない自らが作品世界の一員となって、作中キャラクターと実際にコミュニケーションしているかのように展開される鑑賞体験の拡張をコンセプトに制作いたしました。作品内でのリアルな体験表現だけでなく、モーションキャプチャー収録方法、Oculus Questでの快適な動作を前提としたシビアなパフォーマンス制限の中でアニメ世界をどう表現したかを、発売初日からSteamのVR売上トップページにランクインした本プロジェクトを事例に、VRアニメーションにおける技術と表現方法を紹介いたします。また、今後の「からかい上手の高木さんVR」の予定なども先行紹介。">
+<meta name="viewport" content="width=device-width"/>
+<meta property="og:title" content="次世代VRアニメーションの技術と表現について｜XR Kaigi 2020">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://xrkaigi.com/2020/session/057051edb121.html">
+<meta property="og:image" content="https://xrkaigi.com/2020/assets/img/ogimage.png">
+<meta property="og:site_name" content="XR Kaigi 2020">
+<meta property="og:description"  content="カヤックのXRチームを率いる天野が手掛けた、大人気からかい青春コメディー漫画『からかい上手の高木さん』(山本崇一朗 著)のVRアニメ「からかい上手の高木さんVR 1学期」。ユーザー自身が主人公となり、アニメの世界を自由に回遊しながらヒロインとのコミュニケーションを楽しむことができます。さらに、ユーザーの体の動きや移動にも連動する6Dofに対応した表現や演出を盛り込み、従来のアニメでは体験できない自らが作品世界の一員となって、作中キャラクターと実際にコミュニケーションしているかのように展開される鑑賞体験の拡張をコンセプトに制作いたしました。作品内でのリアルな体験表現だけでなく、モーションキャプチャー収録方法、Oculus Questでの快適な動作を前提としたシビアなパフォーマンス制限の中でアニメ世界をどう表現したかを、発売初日からSteamのVR売上トップページにランクインした本プロジェクトを事例に、VRアニメーションにおける技術と表現方法を紹介いたします。また、今後の「からかい上手の高木さんVR」の予定なども先行紹介。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@XRKaigi">
+<meta name="twitter:creator" content="@ikkou">
+<link rel="canonical" href="https://xrkaigi.com/2020/session/057051edb121.html">
+<link rel="apple-touch-icon" type="image/png" href="../assets/img/icon-180x180.png">
+<link rel="icon" type="image/png" href="../assets/img/icon-192x192.png">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|M+PLUS+Rounded+1c|Noto+Sans+JP&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149479077-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-149479077-1');
+</script>
+</head>
+<body id="top">
+<div uk-sticky="" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed section-gnav">
+  <div class="uk-container uk-container-expand">
+    <nav class="uk-navbar">
+      <div class="uk-navbar-left">
+        <a href="../" class="uk-navbar-item uk-logo"><img data-src="../assets/img/header-logo.png" width="118" alt="" uk-img></a>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@m">
+          <li><a href="../index.html#top">トップ</a></li>
+          <li><a href="../index.html#about">開催概要</a></li>
+          <li><a href="../index.html#speaker">スピーカー</a></li>
+          <li><a href="./session/">講演一覧</a></li>
+          <li><a href="../index.html#sponsor">スポンサー</a></li>
+        </ul>
+        <div class="uk-navbar-item uk-visible@m">
+          <div><a onClick="ga('send', 'event', 'link', 'jump', 'チケット(gnav)');" class="uk-button uk-button-danger" href="https://online.xrkaigi.com/">早割チケットを購入する</a></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<header>
+  <div class="uk-background-cover section-header">
+    <div class="uk-container uk-container-expand uk-align-center uk-section">
+      <p class="uk-text-lead uk-text-bold">講演詳細</p>
+      <p class="uk-text-lead uk-text-bold">Session Detail</p>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="uk-container uk-container-expand uk-align-center uk-margin-top">
+    <ul class="uk-breadcrumb">
+      <li><a href="../index.html">TOP</a></li>
+      <li><a href="./index.html">講演一覧</a></li>
+      <li><span>次世代VRアニメーションの技術と表現について</span></li>
+    </ul>
+  </div>
+  <!-- Session Detail -->
+  <section id="sessionDetail" class="uk-section section-detail">
+    <div class="uk-container uk-align-center">
+      <div class="uk-container uk-container-small uk-align-center">
+        <h1>次世代VRアニメーションの技術と表現について</h1>
+        <h2 class="uk-text-center uk-heading-line"><span>講演情報</span></h2>
+        <table class="uk-margin-medium-top uk-table uk-table-middle uk-table-divider uk-table-striped uk-table-large block-table">
+          <tr>
+            <th>資料公開予定</th>
+            <td>予定なし</td>
+          </tr>
+          <tr>
+            <th>スクリーンショット撮影可否</th>
+            <td>可</td>
+          </tr>
+          <tr>
+            <th>SNS投稿可否</th>
+            <td>可</td>
+          </tr>
+        </table>
+        <h2 class="uk-text-center uk-heading-line"><span>講演概要</span></h2>
+        <p class="uk-margin-medium-top">
+          カヤックのXRチームを率いる天野が手掛けた、大人気からかい青春コメディー漫画『からかい上手の高木さん』(山本崇一朗 著)のVRアニメ「からかい上手の高木さんVR 1学期」。ユーザー自身が主人公となり、アニメの世界を自由に回遊しながらヒロインとのコミュニケーションを楽しむことができます。さらに、ユーザーの体の動きや移動にも連動する6Dofに対応した表現や演出を盛り込み、従来のアニメでは体験できない自らが作品世界の一員となって、作中キャラクターと実際にコミュニケーションしているかのように展開される鑑賞体験の拡張をコンセプトに制作いたしました。作品内でのリアルな体験表現だけでなく、モーションキャプチャー収録方法、Oculus Questでの快適な動作を前提としたシビアなパフォーマンス制限の中でアニメ世界をどう表現したかを、発売初日からSteamのVR売上トップページにランクインした本プロジェクトを事例に、VRアニメーションにおける技術と表現方法を紹介いたします。また、今後の「からかい上手の高木さんVR」の予定なども先行紹介。
+        </p>
+        <h2 class="uk-text-center uk-heading-line"><span>講演者詳細</span></h2>
+        <ul class="uk-margin-medium-top uk-grid-match uk-child-width-1-2@m" uk-grid>
+          <li>
+            <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <!-- <div class="uk-width-auto">
+                    <img data-src="../assets/img/speaker/xxx.png" width="100" height="" alt="xxx" uk-img>
+                  </div> -->
+                  <div class="uk-width-expand">
+                    <p class="uk-text-bold uk-margin-small">天野清之<a href="https://twitter.com/zacctter" target="_blank"><span uk-icon="twitter" class="uk-margin-small-left"></span></a></p>
+                    <p class="uk-text-small uk-margin-remove-top">カヤックアキバスタジオ CXO／クリエイティブディレクター</p>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <p class="uk-text-small">
+                  面白法人カヤック クリエイティブディレクターとして体験型展示から映像まで数々のプロジェクトを企画・開発し多数の賞を受賞。 カヤックアキバスタジオのCXOを兼任。
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <!-- <div class="uk-width-auto">
+                    <img data-src="../assets/img/speaker/xxx.png" width="100" height="" alt="xxx" uk-img>
+                  </div> -->
+                  <div class="uk-width-expand">
+                    <p class="uk-text-bold uk-margin-small">永田俊輔</p>
+                    <p class="uk-text-small uk-margin-remove-top">面白法人カヤック エンジニア／テクニカルディレクター</p>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <p class="uk-text-small">
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="uk-margin-top">
+    <ul class="uk-flex-center uk-text-small uk-text-small" uk-grid>
+      <li><a href="https://www.moguravr.com/privacy/" target="_blank">プライバシーポリシー</a></li>
+      <li><a href="/2020/coc/">行動規範</a></li>
+      <li><a href="/2019/">2019年の様子</a></li>
+    </ul>
+    <p class="uk-text-small uk-text-center uk-text-small uk-margin-small">© 2020 XR Kaigi 2020 All Rights Reserved.</p>
+  </div>
+</footer>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v4.0&appId=375096969211793&autoLogAppEvents=1"></script>
+</body>
+</html>

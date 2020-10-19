@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<title>Mixed Realityを活用したIot Edgeの管理と情報の可視化による「Digital Twins」の実現｜XR Kaigi 2020</title>
+<meta name="description" content="「Digital Twin」という現実空間の情報をIoT Edgeデバイスでデジタルデータとして収集し可視化する概念があります。 今回は「Azure Iot Hub」と「Azure Digital Twins」によりセンサー情報をデジタルデータとして収集し、Azure Spatial AnchorsとHoloLensで現実空間に補完情報として可視化します。 Azure Spatial AnchorsはIoT EdgeとBeaconでリンクしているためセンサー近傍に情報出力が可能となります。 本講演ではこれらを実現するための基本的な手順とHoloLens 2を利用することによるデジタルツインの実現性について、デモ結果を踏まえた考察を共有したいと思います。">
+<meta name="viewport" content="width=device-width"/>
+<meta property="og:title" content="Mixed Realityを活用したIot Edgeの管理と情報の可視化による「Digital Twins」の実現｜XR Kaigi 2020">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://xrkaigi.com/2020/session/2daa988c6113.html">
+<meta property="og:image" content="https://xrkaigi.com/2020/assets/img/ogimage.png">
+<meta property="og:site_name" content="XR Kaigi 2020">
+<meta property="og:description"  content="「Digital Twin」という現実空間の情報をIoT Edgeデバイスでデジタルデータとして収集し可視化する概念があります。 今回は「Azure Iot Hub」と「Azure Digital Twins」によりセンサー情報をデジタルデータとして収集し、Azure Spatial AnchorsとHoloLensで現実空間に補完情報として可視化します。 Azure Spatial AnchorsはIoT EdgeとBeaconでリンクしているためセンサー近傍に情報出力が可能となります。 本講演ではこれらを実現するための基本的な手順とHoloLens 2を利用することによるデジタルツインの実現性について、デモ結果を踏まえた考察を共有したいと思います。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@XRKaigi">
+<meta name="twitter:creator" content="@ikkou">
+<link rel="canonical" href="https://xrkaigi.com/2020/session/2daa988c6113.html">
+<link rel="apple-touch-icon" type="image/png" href="../assets/img/icon-180x180.png">
+<link rel="icon" type="image/png" href="../assets/img/icon-192x192.png">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|M+PLUS+Rounded+1c|Noto+Sans+JP&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149479077-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-149479077-1');
+</script>
+</head>
+<body id="top">
+<div uk-sticky="" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed section-gnav">
+  <div class="uk-container uk-container-expand">
+    <nav class="uk-navbar">
+      <div class="uk-navbar-left">
+        <a href="../" class="uk-navbar-item uk-logo"><img data-src="../assets/img/header-logo.png" width="118" alt="" uk-img></a>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@m">
+          <li><a href="../index.html#top">トップ</a></li>
+          <li><a href="../index.html#about">開催概要</a></li>
+          <li><a href="../index.html#speaker">スピーカー</a></li>
+          <li><a href="./session/">講演一覧</a></li>
+          <li><a href="../index.html#sponsor">スポンサー</a></li>
+        </ul>
+        <div class="uk-navbar-item uk-visible@m">
+          <div><a onClick="ga('send', 'event', 'link', 'jump', 'チケット(gnav)');" class="uk-button uk-button-danger" href="https://online.xrkaigi.com/">早割チケットを購入する</a></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<header>
+  <div class="uk-background-cover section-header">
+    <div class="uk-container uk-container-expand uk-align-center uk-section">
+      <p class="uk-text-lead uk-text-bold">講演詳細</p>
+      <p class="uk-text-lead uk-text-bold">Session Detail</p>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="uk-container uk-container-expand uk-align-center uk-margin-top">
+    <ul class="uk-breadcrumb">
+      <li><a href="../index.html">TOP</a></li>
+      <li><a href="./index.html">講演一覧</a></li>
+      <li><span>Mixed Realityを活用したIot Edgeの管理と情報の可視化による「Digital Twins」の実現</span></li>
+    </ul>
+  </div>
+  <!-- Session Detail -->
+  <section id="sessionDetail" class="uk-section section-detail">
+    <div class="uk-container uk-align-center">
+      <div class="uk-container uk-container-small uk-align-center">
+        <h1>Mixed Realityを活用したIot Edgeの管理と情報の可視化による「Digital Twins」の実現</h1>
+        <h2 class="uk-text-center uk-heading-line"><span>講演情報</span></h2>
+        <table class="uk-margin-medium-top uk-table uk-table-middle uk-table-divider uk-table-striped uk-table-large block-table">
+          <tr>
+            <th>資料公開予定</th>
+            <td>公開予定</td>
+          </tr>
+          <tr>
+            <th>スクリーンショット撮影可否</th>
+            <td>可</td>
+          </tr>
+          <tr>
+            <th>SNS投稿可否</th>
+            <td>可</td>
+          </tr>
+        </table>
+        <h2 class="uk-text-center uk-heading-line"><span>講演概要</span></h2>
+        <p class="uk-margin-medium-top">
+          「Digital Twin」という現実空間の情報をIoT Edgeデバイスでデジタルデータとして収集し可視化する概念があります。 今回は「Azure Iot Hub」と「Azure Digital Twins」によりセンサー情報をデジタルデータとして収集し、Azure Spatial AnchorsとHoloLensで現実空間に補完情報として可視化します。 Azure Spatial AnchorsはIoT EdgeとBeaconでリンクしているためセンサー近傍に情報出力が可能となります。 本講演ではこれらを実現するための基本的な手順とHoloLens 2を利用することによるデジタルツインの実現性について、デモ結果を踏まえた考察を共有したいと思います。
+        </p>
+        <h2 class="uk-text-center uk-heading-line"><span>講演者詳細</span></h2>
+        <ul class="uk-margin-medium-top uk-grid-match uk-child-width-1-1@m" uk-grid>
+          <li>
+            <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div class="uk-width-auto">
+                    <img data-src="../assets/img/speaker/TakahiroMiyaura.jpg" width="100" height="" alt="宮浦 恭弘" uk-img>
+                  </div>
+                  <div class="uk-width-expand">
+                    <p class="uk-text-bold uk-margin-small">宮浦 恭弘<a href="https://twitter.com/takabrz1" target="_blank"><span uk-icon="twitter" class="uk-margin-small-left"></span></a></p>
+                    <p class="uk-text-small uk-margin-remove-top">大阪駆動開発コミュニティ Microsoft MVP for Windows Development</p>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <p class="uk-text-small">
+                  Microsoft MVP for Windows Development 2018-2020. 業務ではソフトウェアエンジニア/アプリケーションアーキテクトを担当。 業務アプリケーション実行基盤の開発に従事。 業務の傍らxR（特にMixed Reality領域）についての開発技術の調査、開発などを行っています。 また、「大阪駆動開発」コミュニティに所属し、日々の調査で得た知見はコミュニティを通して情報発信を行っています。
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="uk-margin-top">
+    <ul class="uk-flex-center uk-text-small uk-text-small" uk-grid>
+      <li><a href="https://www.moguravr.com/privacy/" target="_blank">プライバシーポリシー</a></li>
+      <li><a href="/2020/coc/">行動規範</a></li>
+      <li><a href="/2019/">2019年の様子</a></li>
+    </ul>
+    <p class="uk-text-small uk-text-center uk-text-small uk-margin-small">© 2020 XR Kaigi 2020 All Rights Reserved.</p>
+  </div>
+</footer>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v4.0&appId=375096969211793&autoLogAppEvents=1"></script>
+</body>
+</html>
