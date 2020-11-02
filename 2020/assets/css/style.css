@@ -25,6 +25,9 @@ a.uk-button:active {
   color: #fff;
   text-decoration: none;
 }
+.uk-breadcrumb>li:nth-child(3) {
+  flex: initial;
+}
 
 /* common */
 .section-title {
