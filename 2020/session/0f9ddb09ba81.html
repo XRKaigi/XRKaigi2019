@@ -2,19 +2,19 @@
 <html prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="utf-8">
-<title>Unreal Engineでリアルタイムシミュレーションを実現するまで｜XR Kaigi 2020</title>
-<meta name="description" content="Unreal Engineと、実空間で取得したデータやシミュレーションデータを連動させたリアルタイムのコンテンツを製作しています。自動運転車両開発、災害用訓練コンテンツなど、 多岐に渡る領域で用いている本技術の事例や要素技術について解説します。また弊社ではこうした取り組みが評価され、 2020年にEPIC MegaGrantsを受賞しました。">
+<title>「ALTDEUS* Beyond CHronos」メイキング｜XR Kaigi 2020</title>
+<meta name="description" content="【※ネタバレやストーリーへの新規言及一切ナシ※】2020年12月4日リリースのVRインタラクティブストーリーアクション「ALTDEUS: Beyond Chronos」 のメイキングについて、お話しします。「物語の最前線に行く」作品を志向して制作された本作において、いかにプレイヤーに興奮を与え、気持ち良くプレイしてもらえるかが非常に重要です。想定プレイ時間20時間の「物語×VR」をどのような思想で組み立てたか、またどうやって成立させたかを語ります。本作をはじめ「物語×VR」のジャンルに興味がある方、VR時代のUI・UXなどのインタフェース周りの表現に興味のある方はぜひ。">
 <meta name="viewport" content="width=device-width"/>
-<meta property="og:title" content="Unreal Engineでリアルタイムシミュレーションを実現するまで｜XR Kaigi 2020">
+<meta property="og:title" content="「ALTDEUS* Beyond CHronos」メイキング｜XR Kaigi 2020">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://xrkaigi.com/2020/session/692dfd8bbda6.html">
+<meta property="og:url" content="https://xrkaigi.com/2020/session/0f9ddb09ba81.html">
 <meta property="og:image" content="https://xrkaigi.com/2020/assets/img/ogimage.png">
 <meta property="og:site_name" content="XR Kaigi 2020">
-<meta property="og:description"  content="Unreal Engineと、実空間で取得したデータやシミュレーションデータを連動させたリアルタイムのコンテンツを製作しています。自動運転車両開発、災害用訓練コンテンツなど、 多岐に渡る領域で用いている本技術の事例や要素技術について解説します。また弊社ではこうした取り組みが評価され、 2020年にEPIC MegaGrantsを受賞しました。">
+<meta property="og:description"  content="【※ネタバレやストーリーへの新規言及一切ナシ※】2020年12月4日リリースのVRインタラクティブストーリーアクション「ALTDEUS: Beyond Chronos」 のメイキングについて、お話しします。「物語の最前線に行く」作品を志向して制作された本作において、いかにプレイヤーに興奮を与え、気持ち良くプレイしてもらえるかが非常に重要です。想定プレイ時間20時間の「物語×VR」をどのような思想で組み立てたか、またどうやって成立させたかを語ります。本作をはじめ「物語×VR」のジャンルに興味がある方、VR時代のUI・UXなどのインタフェース周りの表現に興味のある方はぜひ。">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@XRKaigi">
 <meta name="twitter:creator" content="@ikkou">
-<link rel="canonical" href="https://xrkaigi.com/2020/session/692dfd8bbda6.html">
+<link rel="canonical" href="https://xrkaigi.com/2020/session/0f9ddb09ba81.html">
 <link rel="apple-touch-icon" type="image/png" href="../assets/img/icon-180x180.png">
 <link rel="icon" type="image/png" href="../assets/img/icon-192x192.png">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|M+PLUS+Rounded+1c|Noto+Sans+JP&display=swap" rel="stylesheet">
@@ -66,14 +66,14 @@
     <ul class="uk-breadcrumb">
       <li><a href="../index.html">TOP</a></li>
       <li><a href="./index.html">講演一覧</a></li>
-      <li><span>Unreal Engineでリアルタイムシミュレーションを実現するまで</span></li>
+      <li><span>「ALTDEUS* Beyond CHronos」メイキング</span></li>
     </ul>
   </div>
   <!-- Session Detail -->
   <section id="sessionDetail" class="uk-section section-detail">
     <div class="uk-container uk-align-center">
       <div class="uk-container uk-container-small uk-align-center">
-        <h1>Unreal Engineでリアルタイムシミュレーションを実現するまで</h1>
+        <h1>「ALTDEUS* Beyond CHronos」メイキング</h1>
         <h2 class="uk-text-center uk-heading-line"><span>講演情報</span></h2>
         <table class="uk-margin-medium-top uk-table uk-table-middle uk-table-divider uk-table-striped uk-table-large block-table">
           <tr>
@@ -91,7 +91,7 @@
         </table>
         <h2 class="uk-text-center uk-heading-line"><span>講演概要</span></h2>
         <p class="uk-margin-medium-top">
-          Unreal Engineと、実空間で取得したデータやシミュレーションデータを連動させたリアルタイムのコンテンツを製作しています。自動運転車両開発、災害用訓練コンテンツなど、 多岐に渡る領域で用いている本技術の事例や要素技術について解説します。また弊社ではこうした取り組みが評価され、 2020年にEPIC MegaGrantsを受賞しました。
+          【※ネタバレやストーリーへの新規言及一切ナシ※】2020年12月4日リリースのVRインタラクティブストーリーアクション「ALTDEUS: Beyond Chronos」 のメイキングについて、お話しします。「物語の最前線に行く」作品を志向して制作された本作において、いかにプレイヤーに興奮を与え、気持ち良くプレイしてもらえるかが非常に重要です。想定プレイ時間20時間の「物語×VR」をどのような思想で組み立てたか、またどうやって成立させたかを語ります。本作をはじめ「物語×VR」のジャンルに興味がある方、VR時代のUI・UXなどのインタフェース周りの表現に興味のある方はぜひ。1
         </p>
         <h2 class="uk-text-center uk-heading-line"><span>講演者詳細</span></h2>
         <ul class="uk-margin-medium-top uk-grid-match uk-child-width-1-2@m" uk-grid>
@@ -100,17 +100,17 @@
               <div class="uk-card-header">
                 <div class="uk-grid-small uk-flex-middle" uk-grid>
                   <div class="uk-width-auto">
-                    <img data-src="../assets/img/speaker/DaikiIshikawa.jpg" width="100" height="" alt="石川 大樹" uk-img>
+                    <img data-src="../assets/img/speaker/HarukiKashiwakura.jpg" width="100" height="" alt="柏倉 晴樹" uk-img>
                   </div>
                   <div class="uk-width-expand">
-                    <p class="uk-text-bold uk-margin-small">石川 大樹</p>
-                    <p class="uk-text-small uk-margin-remove-top">株式会社理経 室長</p>
+                    <p class="uk-text-bold uk-margin-small">柏倉 晴樹<a href="https://twitter.com/akitsuki_dash" target="_blank"><span uk-icon="twitter" class="uk-margin-small-left"></span></a></p>
+                    <p class="uk-text-small uk-margin-remove-top">MyDearest Inc. ディレクター</p>
                   </div>
                 </div>
               </div>
               <div class="uk-card-body">
                 <p class="uk-text-small">
-                  2015年理経入社。入社後、「UE4を活用したVR開発」に特化した新規事業部を立ち上げる。災害×VRのテーマで全国100箇所以上にコンテンツを導入。現在は自動車、不動産など幅広いエンタープライズ向けVRの企画立案・開発を担う。
+                  『東京クロノス』監督。 CG アニメーターとして数多くのアニメ作品に参画。2014 年 11 月に公開 されたアニメーション映画『楽園追放 -Expelled from Paradise-』ではモーション監督を務めた。『ALTDEUS: Beyond Chronos』および『東京クロノス』では作品全体のディレクターとして、「物語×VR」というテーマで挑戦をしている。
                 </p>
               </div>
             </div>
@@ -120,18 +120,13 @@
               <div class="uk-card-header">
                 <div class="uk-grid-small uk-flex-middle" uk-grid>
                   <div class="uk-width-auto">
-                    <img data-src="../assets/img/speaker/KazukiHarada.png" width="100" height="" alt="原田 和樹" uk-img>
+                    <img data-src="../assets/img/speaker/KohkiNakaji.jpg" width="100" height="" alt="中地 功貴" uk-img>
                   </div>
                   <div class="uk-width-expand">
-                    <p class="uk-text-bold uk-margin-small">原田 和樹</p>
-                    <p class="uk-text-small uk-margin-remove-top">株式会社理経 XRソリューショングループ VRエンジニア</p>
+                    <p class="uk-text-bold uk-margin-small">中地 功貴<a href="https://twitter.com/nkjzm" target="_blank"><span uk-icon="twitter" class="uk-margin-small-left"></span></a></p>
+                    <p class="uk-text-small uk-margin-remove-top">MyDearest Inc. プログラマー</p>
                   </div>
                 </div>
-              </div>
-              <div class="uk-card-body">
-                <p class="uk-text-small">
-                  2019年にVRエンジニアとして入社。Unreal Engineと他シミュレータやデバイスの連携をメインで担当し、自動運転車両向け学習用環境の構築では中心的な役割を担う。
-                </p>
               </div>
             </div>
           </li>

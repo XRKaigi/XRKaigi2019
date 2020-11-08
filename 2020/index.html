@@ -47,7 +47,7 @@
           <li><a href="#sponsor">スポンサー</a></li>
         </ul>
         <div class="uk-navbar-item uk-visible@m">
-          <div><a onClick="ga('send', 'event', 'link', 'jump', 'チケット(gnav)');" class="uk-button uk-button-danger" href="https://online.xrkaigi.com/">チケットを購入する</a></div>
+          <div><a onclick="gtag('event', 'Click', {'event_category': 'ticket', 'event_label': 'gNav', 'value': '0'});" class="uk-button uk-button-danger" href="https://online.xrkaigi.com/">チケットを購入する</a></div>
         </div>
       </div>
     </nav>
@@ -122,7 +122,7 @@
         </div>
         <div class="uk-margin-medium-top">
           <button class="uk-button uk-width-1-1 uk-button-danger uk-align-center">
-            <a onClick="ga('send', 'event', 'link', 'jump', 'チケット(TOP)');" class="uk-link-reset" href="https://online.xrkaigi.com/" target="_blank">チケットを購入する</a>
+            <a onclick="gtag('event', 'Click', {'event_category': 'ticket', 'event_label': 'top_lead', 'value': '0'});" class="uk-link-reset" href="https://online.xrkaigi.com/">チケットを購入する</a>
           </button>
         </div>
       </div>
@@ -134,6 +134,13 @@
     <div class="uk-container uk-container-small uk-align-center">
       <h2 class="uk-text-center section-title">NEWS</h2>
       <dl>
+        <dt>2020/11/09</dt>
+        <dd>
+          <ul>
+            <li><a href="./session/">第3弾 講演情報を公開しました。</a></li>
+            <li><a href="#speaker">第4弾 登壇者情報を公開しました。</a></li>
+          </ul>
+        </dd>
         <dt>2020/10/29</dt>
         <dd>
           <ul>
@@ -156,6 +163,27 @@
     <div class="uk-container uk-container-small uk-align-center">
       <h2 class="uk-text-center section-title">AWESOME SPEAKERS</h2>
       <div class="uk-grid-match uk-grid-small uk-child-width-1-4@s" uk-grid>
+        <div>
+          <div class="uk-card uk-card-default uk-card-small uk-card-body">
+              <div class="uk-card-title"><img data-src="./assets/img/speaker/ShuheiMatsuyama.jpg" width="" height="" alt="松山 周平" uk-img class="uk-align-center"></div>
+              <p class="uk-text-bold uk-margin-small">松山 周平</p>
+              <p class="uk-text-small uk-margin-remove-top uk-text-muted">プログラマー・ヴィジュアルアーティスト / 株式会社ティーアンドエス 取締役 THINK AND SENSE部 部長 / クリエイティブレーベルnor所属</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default uk-card-small uk-card-body">
+              <div class="uk-card-title"><img data-src="./assets/img/speaker/YuSasaki.jpg" width="" height="" alt="佐々木 悠" uk-img class="uk-align-center"></div>
+              <p class="uk-text-bold uk-margin-small">佐々木 悠</p>
+              <p class="uk-text-small uk-margin-remove-top uk-text-muted">株式会社ディー・エヌ・エー 執行役員 ゲーム事業本部 事業本部長</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default uk-card-small uk-card-body">
+              <div class="uk-card-title"><img data-src="./assets/img/speaker/ShunKubota.jpg" width="" height="" alt="久保田 瞬" uk-img class="uk-align-center"></div>
+              <p class="uk-text-bold uk-margin-small">久保田 瞬</p>
+              <p class="uk-text-small uk-margin-remove-top uk-text-muted">Mogura VR 編集長・株式会社Mogura代表取締役社長</p>
+          </div>
+        </div>
         <div>
           <div class="uk-card uk-card-default uk-card-small uk-card-body">
               <div class="uk-card-title"><img data-src="./assets/img/speaker/YoshinoriUeda.jpg" width="" height="" alt="上田 欣典" uk-img class="uk-align-center"></div>
@@ -244,7 +272,7 @@
           <div class="uk-card uk-card-default uk-card-small uk-card-body">
               <div class="uk-card-title"><img data-src="./assets/img/speaker/KiralPoon.jpg" width="" height="" alt="Kiral Poon" uk-img class="uk-align-center"></div>
               <p class="uk-text-bold uk-margin-small">Kiral Poon</p>
-              <p class="uk-text-small uk-margin-remove-top uk-text-muted">CTO, Gugenka</p>
+              <p class="uk-text-small uk-margin-remove-top uk-text-muted">Gugenka CTO, Gugenka Manila Studio COO</p>
           </div>
         </div>
         <div>
@@ -555,6 +583,20 @@
               <p class="uk-text-small uk-margin-remove-top uk-text-muted">株式会社カヤック エンジニア / テクニカルディレクター</p>
           </div>
         </div>
+        <div>
+          <div class="uk-card uk-card-default uk-card-small uk-card-body">
+              <div class="uk-card-title"><img data-src="./assets/img/speaker/KeigoFujikawa.jpg" width="" height="" alt="藤川 啓吾" uk-img class="uk-align-center"></div>
+              <p class="uk-text-bold uk-margin-small">藤川 啓吾</p>
+              <p class="uk-text-small uk-margin-remove-top uk-text-muted">株式会社UNIVRS 代表取締役CEO VR兄弟[兄]</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default uk-card-small uk-card-body">
+              <div class="uk-card-title"><img data-src="./assets/img/speaker/ShunFujikawa.jpg" width="" height="" alt=",藤川 駿" uk-img class="uk-align-center"></div>
+              <p class="uk-text-bold uk-margin-small">藤川 駿</p>
+              <p class="uk-text-small uk-margin-remove-top uk-text-muted">株式会社UNIVRS 取締役CIO VR兄弟[弟]</p>
+          </div>
+        </div>
       </div>
       <h2 class="uk-text-center section-title">COMMUNITY ORGANIZED SPEAKERS</h2>
       <div class="uk-grid-match uk-grid-small uk-child-width-1-4@s" uk-grid>
@@ -790,7 +832,7 @@
           <td>
             <p>
               専用サイトでアカウントを作成の上、ご購入ください。<br>
-              <a onClick="ga('send', 'event', 'link', 'jump', 'チケット(開催概要)');" href="https://online.xrkaigi.com/" target="_blank">https://online.xrkaigi.com/</a>
+              <a onclick="gtag('event', 'Click', {'event_category': 'ticket', 'event_label': 'about', 'value': '0'});" href="https://online.xrkaigi.com/" target="_blank">https://online.xrkaigi.com/</a>
             </p>
             <dl>
               <dt>
@@ -887,18 +929,18 @@
       <dd class="uk-margin-small-top"><span class="uk-margin-small-right" uk-icon="mail"></span><a href="mailto:xrkaigi@moguravr.com?subject=【XR Kaigi 2020に関するお問い合わせ】" target="_blank">xrkaigi@moguravr.com</a></dd>
       <dt class="uk-text-bold uk-text-large">XR Future Pitch 2020への参加を希望される企業の方</dt>
       <dd class="uk-margin-small-top">
-        <a onClick="ga('send', 'event', 'link', 'jump', '登壇企業公募のご案内');" href="/2020/callforpitches/">登壇企業公募のご案内</a>
+        <a onclick="gtag('event', 'Click', {'event_category': 'pitche', 'event_label': '登壇企業公募のご案内', 'value': '0'});" href="/2020/callforpitches/" target="_blank">登壇企業公募のご案内</a>
       </dd>
       <dt class="uk-text-bold uk-text-large">取材を希望されるメディアの方</dt>
       <dd class="uk-margin-small-top">
-        <a onClick="ga('send', 'event', 'link', 'jump', '取材申込みフォーム');" href="https://forms.gle/4xH78RZQTxkfWEMs9" target="_blank">取材申込みフォーム</a>
+        <a onclick="gtag('event', 'Click', {'event_category': 'media', 'event_label': '取材申込みフォーム', 'value': '0'});" href="https://forms.gle/4xH78RZQTxkfWEMs9" target="_blank">取材申込みフォーム</a>
       </dd>
       <dt class="uk-text-bold">スポンサードを検討される企業の方</dt>
       <dd class="uk-margin-small-top">
-        <a onClick="ga('send', 'event', 'pdf', 'download', 'スポンサード検討用資料');" href="https://drive.google.com/file/d/1elFQXM3Xxxbm4hQIcmryMv_h6W16z4Fl/view?usp=sharing" target="_blank">スポンサードご検討用資料(PDF)</a>
+        <a onclick="gtag('event', 'Click', {'event_category': 'download', 'event_label': 'スポンサード検討用資料', 'value': '0'});" href="https://drive.google.com/file/d/1elFQXM3Xxxbm4hQIcmryMv_h6W16z4Fl/view?usp=sharing" target="_blank">スポンサードご検討用資料(PDF)</a>
       </dd>
       <dd class="uk-margin-small-top">
-        <a onClick="ga('send', 'event', 'docx', 'download', 'スポンサードお申込書');" href="https://drive.google.com/file/d/19BGGoHke2QtUH-g4yniLH03Kygte7LEn/view" target="_blank">スポンサードお申込書</a>
+        <a onclick="gtag('event', 'Click', {'event_category': 'download', 'event_label': 'スポンサードお申込書', 'value': '0'});" href="https://drive.google.com/file/d/19BGGoHke2QtUH-g4yniLH03Kygte7LEn/view" target="_blank">チケットを購入する</a>
       </dd>
     </dl>
   </section>
