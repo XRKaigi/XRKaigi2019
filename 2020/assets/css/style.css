@@ -175,6 +175,59 @@ a.uk-button:active {
     font-size: 1.2rem;
   }
 }
+.section-timeTable .uk-label,
+.section-timeTable .uk-description-list>dt {
+  text-transform: none;
+}
+.section-timeTable .uk-description-list>dt:nth-child(n+2) {
+  margin-top: 10px;
+}
+.section-timeTable h4,
+.section-timeTable .uk-card-title {
+  font-size: 1rem;
+}
+.section-timeTable dd {
+  font-size: .76rem;
+  margin-top: 5px;
+}
+.section-timeTable .uk-label {
+  color: #333;
+  font-weight: bold;
+}
+.section-timeTable .uk-label,
+.section-timeTable .uk-description-list>dt {
+  text-transform: none;
+}
+.section-timeTable .uk-description-list>dt:nth-child(n+2) {
+  margin-top: 10px;
+}
+.section-timeTable h4,
+.section-timeTable .uk-card-title {
+  font-size: 1rem;
+}
+.section-timeTable dd {
+  font-size: .76rem;
+  margin-top: 5px;
+}
+.section-timeTable .uk-label,
+.section-timeTable .uk-label-success,
+.section-timeTable .uk-label-warning {
+  font-size: .4em;
+  padding: 1px 3px;
+  color: #fff;
+}
+.section-timeTable *+h4.uk-card-title {
+  margin-top: 0;
+}
+
+
+.uk-label-tag-en {
+  background: #ccc;
+  font-size: 0.6rem;
+}
+.block-cos {
+  font-size: 0.8rem;
+}
 
 /* EXPO */
 .youtube {
