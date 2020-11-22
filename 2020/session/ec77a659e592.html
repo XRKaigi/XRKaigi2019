@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<title>OpenXR Update / OpenXR アップデート情報、Interaction in OpenXR / OpenXRにおけるインタラクション、Future-Proof XR / 将来を見据えたXR｜XR Kaigi 2020</title>
+<meta name="description" content="OpenXR APIの概要、そしてインタラクションに関連する基本的なハンドル、アクションセット、アクション、インタラクションプロファイルを使用してインタラクションをモデル化する方法について説明し、hello_xrサンプルアプリのアクションと推奨されるバインディングについて紹介します。また、OpenXRを使用して開発する際に陥りがちな落とし穴を避けれるようになります。">
+<meta name="viewport" content="width=device-width"/>
+<meta property="og:title" content="OpenXR Update / OpenXR アップデート情報、Interaction in OpenXR / OpenXRにおけるインタラクション、Future-Proof XR / 将来を見据えたXR｜XR Kaigi 2020">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://xrkaigi.com/2020/session/ec77a659e592.html">
+<meta property="og:image" content="https://xrkaigi.com/2020/assets/img/ogimage.png">
+<meta property="og:site_name" content="XR Kaigi 2020">
+<meta property="og:description"  content="OpenXR APIの概要、そしてインタラクションに関連する基本的なハンドル、アクションセット、アクション、インタラクションプロファイルを使用してインタラクションをモデル化する方法について説明し、hello_xrサンプルアプリのアクションと推奨されるバインディングについて紹介します。また、OpenXRを使用して開発する際に陥りがちな落とし穴を避けれるようになります。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@XRKaigi">
+<meta name="twitter:creator" content="@ikkou">
+<link rel="canonical" href="https://xrkaigi.com/2020/session/ec77a659e592.html">
+<link rel="apple-touch-icon" type="image/png" href="../assets/img/icon-180x180.png">
+<link rel="icon" type="image/png" href="../assets/img/icon-192x192.png">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|M+PLUS+Rounded+1c|Noto+Sans+JP&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149479077-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-149479077-1');
+</script>
+</head>
+<body id="top">
+<div uk-sticky="" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed section-gnav">
+  <div class="uk-container uk-container-expand">
+    <nav class="uk-navbar">
+      <div class="uk-navbar-left">
+        <a href="../" class="uk-navbar-item uk-logo"><img data-src="../assets/img/header-logo.png" width="118" alt="" uk-img></a>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@m">
+          <li><a href="../index.html#top">トップ</a></li>
+          <li><a href="../index.html#about">開催概要</a></li>
+          <li><a href="../index.html#speaker">スピーカー</a></li>
+          <li><a href="/2020/session/timetable/">タイムテーブル</a></li>
+          <li><a href="/2020/expo/">展示</a></li>
+          <li><a href="../index.html#sponsor">スポンサー</a></li>
+        </ul>
+        <div class="uk-navbar-item uk-visible@m">
+          <div><a onclick="gtag('event', 'Click', {'event_category': 'ticket', 'event_label': 'gNav', 'value': '0'});" class="uk-button uk-button-danger" href="https://online.xrkaigi.com/">チケットを購入する</a></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<header>
+  <div class="uk-background-cover section-header">
+    <div class="uk-container uk-container-expand uk-align-center uk-section">
+      <p class="uk-text-lead uk-text-bold">講演詳細</p>
+      <p class="uk-text-lead uk-text-bold">Session Detail</p>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="uk-container uk-container-expand uk-align-center uk-margin-top">
+    <ul class="uk-breadcrumb">
+      <li><a href="../index.html">TOP</a></li>
+      <li><a href="./index.html">講演一覧</a></li>
+      <li><span>OpenXR Update / OpenXR アップデート情報、Interaction in OpenXR / OpenXRにおけるインタラクション、Future-Proof XR / 将来を見据えたXR</span></li>
+    </ul>
+  </div>
+  <!-- Session Detail -->
+  <section id="sessionDetail" class="uk-section section-detail">
+    <div class="uk-container uk-align-center">
+      <div class="uk-container uk-container-small uk-align-center">
+        <h1>OpenXR Update / OpenXR アップデート情報、Interaction in OpenXR / OpenXRにおけるインタラクション、Future-Proof XR / 将来を見据えたXR</h1>
+        <h2 class="uk-text-center uk-heading-line"><span>講演情報</span></h2>
+        <table class="uk-margin-medium-top uk-table uk-table-middle uk-table-divider uk-table-striped uk-table-large block-table">
+          <tr>
+            <th>資料公開予定</th>
+            <td>公開予定</td>
+          </tr>
+          <tr>
+            <th>スクリーンショット撮影可否</th>
+            <td>可</td>
+          </tr>
+          <tr>
+            <th>SNS投稿可否</th>
+            <td>可</td>
+          </tr>
+        </table>
+        <h2 class="uk-text-center uk-heading-line"><span>講演概要</span></h2>
+        <p class="uk-margin-medium-top">
+          このセッションは3つのパートに分かれています。<br>
+          <br>
+          1. OpenXR Update：The first part of this session will provide an overview of the OpenXR API; its development, usages, adoption, and extensibility and why application developers and hardware makers should be moving to this new standard. <br>
+          <br>
+          このセッションの最初の部分では、OpenXR APIの概要をご紹介します。主に、その開発自体について、用途、採用事例、拡張性などです。また、XR関連のアプリケーション開発者とハードウェアメーカーの皆様がこの規格を利用するメリットについてもご紹介します。<br>
+          <br>
+          2. Interaction in OpenXR ： An important part of the OpenXR hardware independence is how interactions are modeled and handled: as "actions" rather than hardware state. We will discuss the basic handles involved in interaction, how to model interaction using action sets, actions, and interaction profiles, and walk through the actions and suggested bindings of the hello_xr sample app.<br>
+          <br>
+          OpenXRがハードウェアに非依存であることに関する重要な部分は、ハードウェアの状態ではなく「アクション」としてインタラクションがどのようにモデル化および処理されるか、という部分になります。このセッションではインタラクションに関連する基本的なハンドル、アクションセット、アクション、インタラクションプロファイルを使用してインタラクションをモデル化する方法について説明し、hello_xrサンプルアプリのアクションと推奨されるバインディングについて紹介します。<br>
+          <br>
+          3. Future-Proof XR : The OpenXR API allows you to write XR apps that target many different systems, even those that do not exist yet! I order to take advantage of this capability and achieve maximum device compatibility, the API must used correctly. This talk will take you through some of those rules and identify possible pitfalls to avoid while developing using OpenXR.<br>
+          <br>
+          OpenXR APIを使用すればさまざまなシステムを対象にしてXRアプリを作成することが可能です（まだ開発中の存在しないシステムであっても）。この機能を利用してデバイスの互換性を最大限に高めるには、APIを正しく使用しなければなりません。この講演を聞けば、これらのルールのいくつかを紹介することで、OpenXRを使用して開発する際に陥りがちな落とし穴を避けれるようになります。
+        </p>
+        <h2 class="uk-text-center uk-heading-line"><span>講演者詳細</span></h2>
+        <ul class="uk-margin-medium-top uk-grid-match uk-child-width-1-2@m" uk-grid>
+          <li>
+            <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div class="uk-width-auto">
+                    <img data-src="../assets/img/speaker/BrentEInsko.jpg" width="100" height="" alt="Brent E. Insko" uk-img>
+                  </div>
+                  <div class="uk-width-expand">
+                    <p class="uk-text-bold uk-margin-small">Brent E. Insko</p>
+                    <p class="uk-text-small uk-margin-remove-top">Chair of the Khronos OpenXR Working Group and lead XR architect at Intel, Khronos Group</p>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <p class="uk-text-small">
+                  Brent E. Insko , Intel Corp. (Intel Corporation, www.intel.com) Homepage: https://www.linkedin.com/in/brent-insko-a553596/ Personal profile: Chair of the Khronos OpenXR Working Group and lead XR architect at Intel. He received his PhD in Virtual Reality from the University of North Carolina at Chapel Hill under Frederick P. Brooks Jr. in 2001. He has previously worked on graphics hardware for 15 years and contributed to the development of the OpenGL, OpenGL ES, and Vulkan graphics APIs. He has been refocused on AR/VR for the last 4 years. He has spoken at VRDC, GDC, and published in SIGGRAPH.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div class="uk-width-auto">
+                    <img data-src="../assets/img/speaker/RyanAPavlik.jpg" width="100" height="" alt="Ryan A. Pavlik" uk-img>
+                  </div>
+                  <div class="uk-width-expand">
+                    <p class="uk-text-bold uk-margin-small">Ryan A. Pavlik</p>
+                    <p class="uk-text-small uk-margin-remove-top">Principal Software Engineer at Collabora in the XR team, Khronos Group</p>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <p class="uk-text-small">
+                  Principal Software Engineer at Collabora in the XR team, working on XR-related client projects as well as runtime research and development. He serves as the Specification Editor of the Khronos OpenXR Working Group since April of 2019, and has participated in that working group since its formation in 2017. He has previously worked on virtual reality runtimes and technology at Sensics, and on virtual reality software frameworks, virtual assembly for engineering, natural interaction techniques, and haptic force-feedback at the Virtual Reality Applications Center at Iowa State University. He earned his PhD in computer science and human-computer interaction at Iowa State University.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="uk-card uk-card-hover uk-card-default uk-card-small">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div class="uk-width-auto">
+                    <img data-src="../assets/img/speaker/LachlanFord.jpg" width="100" height="" alt="Lachlan Ford" uk-img>
+                  </div>
+                  <div class="uk-width-expand">
+                    <p class="uk-text-bold uk-margin-small">Lachlan Ford</p>
+                    <p class="uk-text-small uk-margin-remove-top">Software Engineer at Microsoft on the Mixed Reality team and contributor to multiple standardization efforts including OpenXR and WebXR, Khronos Group</p>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <p class="uk-text-small">
+                  Lachlan Ford , Microsoft (Microsoft Corporation) Personal profile: Software Engineer at Microsoft on the Mixed Reality team and contributor to multiple standardization efforts including OpenXR and WebXR. He graduated from UNSW in 2015 with a bachelors of Computer Science and worked at the Bill and Melinda Gates foundation funded education technology startup SmartSparrow from 2012, and Microsoft since 2016. He is interested in exploring the limits of technology as well as leveraging standards to combinatorially expand the XR ecosystem.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="uk-margin-top">
+    <ul class="uk-flex-center uk-text-small uk-text-small" uk-grid>
+      <li><a href="https://www.moguravr.com/privacy/" target="_blank">プライバシーポリシー</a></li>
+      <li><a href="/2020/coc/">行動規範</a></li>
+      <li><a href="/2019/">2019年の様子</a></li>
+    </ul>
+    <p class="uk-text-small uk-text-center uk-text-small uk-margin-small">© 2020 XR Kaigi 2020 All Rights Reserved.</p>
+  </div>
+</footer>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v4.0&appId=375096969211793&autoLogAppEvents=1"></script>
+</body>
+</html>
