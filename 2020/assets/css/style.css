@@ -219,8 +219,10 @@ a.uk-button:active {
 .section-timeTable *+h4.uk-card-title {
   margin-top: 0;
 }
-
-
+.section-timeTable h4 span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 .uk-label-tag-en {
   background: #ccc;
   font-size: 0.6rem;
